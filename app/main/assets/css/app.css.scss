@@ -1,0 +1,25 @@
+// Place your apps css here
+.add-task{
+  width: 100%;
+}
+
+
+.todo-table {
+  // width: auto;
+
+  tr {
+    &.selected td {
+      background-color: #88A;
+      color: #FFFFFF;
+    }
+
+    td {
+      // padding: 20px;
+
+      &.complete {
+        text-decoration: line-through;
+        color: #557;
+      }
+    }
+  }
+}
