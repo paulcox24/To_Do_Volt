@@ -3,4 +3,22 @@
 
 <:Body>
   <h1>Home</h1>
+  <select value="{{ _rating }}">
+    <option value="1">*</option>
+    <option value="2">**</option>
+    <option value="3">***</option>
+    <option value="4">****</option>
+    <option value="5">*****</option>
+  </select>
+  {{ _rating }}
+  <br>
+  <input type="radio" checked="{{ _radio }}" value="one" />
+  <input type="radio" checked="{{ _radio }}" value="two" />
+  <input type="radio" checked="{{ _radio }}" value="three" />
+  <input type="radio" checked="{{ _radio }}" value="four" />
+  <input type="radio" checked="{{ _radio }}" value="five" />
+  <input type="radio" checked="{{ _radio }}" value="six" />
+  {{ _radio }}
+  <br>
+  <button e-click="message" class="btn btn-default">See Flash Message</button>
 

@@ -9,13 +9,29 @@ class MainController < Volt::ModelController
     # Add code for when the about view is loaded
   end
 
+  def account
+    # Add code for when the account view is loaded
+  end
+
+  def message
+    # flash._notices << "Your are learing Volt sucka"
+    flash._successes << "Success"
+    # flash._warnings << "Warning"
+    # flash._errors << "Error"
+  end
+
+  def todos
+  end
+
   def add_todo
     _todos << { title: page._new_todo, completed: false }
     page._new_todo = ""
+    flash._successes << "To Do Added"
   end
 
   def remove_todo(todo)
     _todos.delete(todo)
+    flash._successes << "To Do Removed"
   end
 
   def remove_completed
@@ -49,10 +65,6 @@ class MainController < Volt::ModelController
 
   def incomplete
     _todos.size - completed
-  end
-
-  def remove_complete
-    
   end
 
   def percent_complete
